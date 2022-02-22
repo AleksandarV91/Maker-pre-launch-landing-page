@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="./js/main.js"></script>
+
     <link
       rel="icon"
       type="image/png"
@@ -11,6 +11,7 @@
       href="./assets/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <script defer src="./js/main.js"></script>
     <title>Frontend Mentor | Maker pre-launch landing page</title>
   </head>
   <body>
@@ -21,32 +22,40 @@
         <div class="logo">
           <img src="./assets/logo.svg" alt="logo image" />
         </div>
-        <div class="head-bg"></div>
-        <h1>
-          Get paid for the work you <span class="accent">love</span> to do.
-        </h1>
-        <p>
-          The 9-5 grind is so last century. We believe in living life on your
-          own terms. Whether you’re looking to escape the rat race or set up a
-          side hustle, we’ve got you covered.
-        </p>
-        <div class="scroll">
-          <img src="./assets/icon-scroll.svg" alt="scroll icon" />
-        </div>
       </header>
       <!-- END OF HEADER -->
       <!-- MAIN -->
       <main class="main">
-        <!-- INTRO -->
-        <section class="intro">
-          <div class="intro-box passion">
-            <div class="intro-img">
+        <div class="hero-mobile"></div>
+        <!-- HERO -->
+        <section class="hero">
+          <div class="hero-left"></div>
+          <div class="hero-right"></div>
+          <div class="hero-text">
+            <h1>
+              Get paid for the work you <span class="accent">love</span> to do.
+            </h1>
+            <p>
+              The 9-5 grind is so last century. We believe in living life on
+              your own terms. Whether you’re looking to escape the rat race or
+              set up a side hustle, we’ve got you covered.
+            </p>
+            <div class="scroll">
+              <img src="./assets/icon-scroll.svg" alt="scroll icon" />
+            </div>
+          </div>
+        </section>
+        <!-- END OF HERO -->
+        <!-- DESCRIPTION -->
+        <section class="description">
+          <div class="description-box passion">
+            <div class="description-img">
               <img
                 src="./assets/illustration-passions.svg"
                 alt="passion illustration"
               />
             </div>
-            <div class="intro-content">
+            <div class="description-content">
               <h4>Indulge your passions</h4>
               <p>
                 Your passions shouldn't be just for the weekend. Earn a living
@@ -54,14 +63,14 @@
               </p>
             </div>
           </div>
-          <div class="intro-box freedom">
-            <div class="intro-img">
+          <div class="description-box freedom">
+            <div class="description-img">
               <img
                 src="./assets/illustration-financial-freedom.svg"
                 alt="freedom illustration"
               />
             </div>
-            <div class="intro-content">
+            <div class="description-content">
               <h4>Gain financial freedom</h4>
               <p>
                 Start making money work for you. There’s nothing quite like
@@ -69,14 +78,14 @@
               </p>
             </div>
           </div>
-          <div class="intro-box lifestyle">
-            <div class="intro-img">
+          <div class="description-box lifestyle">
+            <div class="description-img">
               <img
                 src="./assets/illustration-lifestyle.svg"
                 alt="lifestyle illustration"
               />
             </div>
-            <div class="intro-content">
+            <div class="description-content">
               <h4>Choose your lifestyle</h4>
               <p>
                 Own your daily schedule. Fancy a lie-in? Go for it! Take charge
@@ -84,14 +93,14 @@
               </p>
             </div>
           </div>
-          <div class="intro-box work">
-            <div class="intro-img">
+          <div class="description-box work">
+            <div class="description-img">
               <img
                 src="./assets/illustration-work-anywhere.svg"
                 alt="work illustration"
               />
             </div>
-            <div class="intro-content">
+            <div class="description-content">
               <h4>Work from anywhere</h4>
               <p>
                 Selling online means not being pinned down. Want to work AND
@@ -100,9 +109,9 @@
             </div>
           </div>
         </section>
-        <!-- END OF INTRO -->
-        <!-- PRICINGS -->
-        <section class="pricings">
+        <!-- END OF DESCRIPTION -->
+        <!-- PRICING -->
+        <section class="pricing">
           <div class="pricing-content">
             <h3>Our pricing plans</h3>
             <p>
@@ -179,10 +188,15 @@
             </div>
           </div>
         </section>
-        <!-- END OF PRICINGS -->
-        <!-- CTA -->
-        <section class="cta">
+        <!-- END OF PRICING -->
+      </main>
+      <!-- END OF MAIN -->
+      <!-- FOOTER -->
+      <footer class="cta">
+        <div class="cta-title">
           <h3>Get notified when we launch</h3>
+        </div>
+        <form class="foot-form">
           <input
             type="email"
             name="email"
@@ -192,10 +206,9 @@
           />
           <small></small>
           <button class="cta-btn">Get notified</button>
-        </section>
-        <!-- END OF CTA -->
-      </main>
-      <!-- END OF MAIN -->
+        </form>
+      </footer>
+      <!-- END OF FOOTER -->
     </div>
     <!-- END OF CONTAINER -->
   </body>

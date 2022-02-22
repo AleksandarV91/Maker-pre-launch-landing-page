@@ -1,6 +1,6 @@
 const emailInput = document.getElementById("email");
 const err = document.querySelector("small");
-const btn = document.querySelector(".cta-btn");
+const ctaBtn = document.querySelector(".cta-btn");
 
 const validation = (email) => {
   let regEx =
@@ -8,10 +8,15 @@ const validation = (email) => {
   return regEx.test(String(email).toLocaleLowerCase());
 };
 
-btn.addEventListener("click", () => {
+ctaBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   const emailValue = emailInput.value.trim();
-  if (emailValue === "" || !validation(emailValue)) {
+  if (emailValue === "") {
     err.innerHTML = "Oops! That doesn’t look like email address";
+    emailInput.classList.add("err-border");
+  } else if (!validation(emailValue)) {
+    err.innerHTML =
+      "Oops! The email address does not appear to be properly formatted";
     emailInput.classList.add("err-border");
   } else {
     emailInput.classList.remove("err-border");
