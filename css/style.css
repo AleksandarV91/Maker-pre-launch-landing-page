@@ -35,14 +35,6 @@
 /* 
 --------------------------------------------------------------------
 --------------------------------------------------------------------
------------------------ CONTAINER ----------------------------------
---------------------------------------------------------------------
---------------------------------------------------------------------
-*/
-
-/* 
---------------------------------------------------------------------
---------------------------------------------------------------------
 --------------------------- HEADER ---------------------------------
 --------------------------------------------------------------------
 --------------------------------------------------------------------
@@ -56,6 +48,13 @@
 .header .logo img {
   width: 8rem;
   height: 2.33rem;
+}
+
+@media screen and (min-width: 650px) {
+  .header {
+    text-align: left;
+    padding: 3.2rem 2.6rem;
+  }
 }
 
 /* 
@@ -77,6 +76,10 @@
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 */
+
+.tab-desk {
+  display: none;
+}
 
 .hero-mobile {
   background: url("../assets/illustration-hero-mobile.png") no-repeat left;
@@ -114,6 +117,90 @@
   font-weight: 500;
   color: var(--grayish-blue);
   padding: 1.5rem;
+}
+
+@media screen and (min-width: 650px) {
+  .tab-desk {
+    display: flex;
+  }
+
+  .hero-left img,
+  .hero-right img {
+    height: 356px;
+  }
+
+  .hero-left {
+    display: block;
+    position: relative;
+    left: -175px;
+    min-height: 314px;
+  }
+
+  .hero-right {
+    display: block;
+    position: relative;
+    right: -175px;
+    min-height: 314px;
+  }
+
+  .hero-mobile {
+    display: none;
+  }
+
+  .hero {
+    background: url(../assets/illustration-hero-left.svg) center left -165px no-repeat,
+      url(../assets/illustration-hero-right.svg) center right -175px no-repeat;
+    background-size: contain;
+    height: 357px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-text {
+    position: absolute;
+    background: url("../assets/bg-hero-squiggle.svg") no-repeat center;
+    background-size: contain;
+    width: 58.5%;
+    right: 20%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-text {
+    width: 457px;
+    right: 27%;
+  }
+
+  .hero {
+    background: url(../assets/illustration-hero-left.svg) center left -80px no-repeat,
+      url(../assets/illustration-hero-right.svg) center right -100px no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    background: url(../assets/illustration-hero-left.svg) center left -53px no-repeat,
+      url(../assets/illustration-hero-right.svg) center right -60px no-repeat;
+    height: 459px;
+  }
+
+  .hero-text {
+    width: 730px;
+    background-size: 80%;
+    padding: 20px;
+    right: 25%;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .hero-text p {
+    margin-bottom: 35px;
+  }
 }
 
 /* 
@@ -175,6 +262,56 @@
   height: 5.33rem;
 }
 
+@media screen and (min-width: 650px) {
+  .description {
+    padding: 0 97px;
+  }
+
+  .description-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+
+  .passion,
+  .lifestyle {
+    margin-left: 100px;
+  }
+
+  .description-content {
+    margin-left: 30px;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .description {
+    display: flex;
+    margin-bottom: 200px;
+  }
+
+  .description-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+  }
+
+  .freedom,
+  .work {
+    transform: translate(0, 60px);
+  }
+
+  .description-img {
+    margin-bottom: 30px;
+  }
+
+  .description-content h4 {
+    margin-bottom: 20px;
+  }
+}
+
 /* 
 --------------------------------------------------------------------
 --------------------------------------------------------------------
@@ -187,6 +324,13 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-panels {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -217,8 +361,8 @@
 
 .free-img img {
   position: absolute;
-  left: 50px;
-  transform: translate(0, 8px);
+  left: 15%;
+  transform: translate(0, -238px);
 }
 
 .free-content,
@@ -287,8 +431,79 @@
 
 .paid-img img {
   position: absolute;
-  left: 50px;
-  transform: translate(0, -3px);
+  left: 15%;
+  transform: translate(0, 240px);
+}
+
+@media screen and (min-width: 650px) {
+  .pricing {
+    padding: 0 97px;
+  }
+
+  .pricing-content {
+    margin-bottom: 35px;
+  }
+
+  .free,
+  .paid {
+    width: 445px;
+    height: 458px;
+    padding-top: 35px;
+  }
+
+  .free-img img {
+    left: 25%;
+    transform: translate(0, -252px);
+  }
+
+  .paid-img img {
+    left: 25%;
+    transform: translate(0, 255px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .free {
+    width: 445px;
+    height: 425px;
+    margin-right: 15px;
+  }
+
+  .paid {
+    width: 445px;
+    height: 449px;
+  }
+}
+
+@media screen and (min-width: 1108px) {
+  .free-img img {
+    left: 12%;
+    transform: translate(0, -235px);
+  }
+
+  .paid-img img {
+    left: 53%;
+    transform: translate(0, -257px);
+  }
+
+  .pricing-content p {
+    padding: 0 150px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .free-img img {
+    left: 22%;
+  }
+
+  .pricing-content p {
+    padding: 0 360px;
+    margin-bottom: 45px;
+  }
+
+  .pricing-content h3 {
+    font-size: 32px;
+  }
 }
 
 /* 
@@ -325,6 +540,13 @@
   border-radius: 1.6rem;
   border: transparent;
   outline: transparent;
+}
+
+.cta-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 375px) {
@@ -372,4 +594,35 @@ small {
   line-height: 1.66rem;
   font-weight: 500;
   color: var(--light-red);
+}
+
+@media screen and (min-width: 650px) {
+  .cta-form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cta-input input {
+    width: 320px;
+    height: 48px;
+  }
+
+  .cta-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cta-btn {
+    transform: translate(0, -10px);
+    width: 140px;
+    height: 48px;
+    margin-left: 15px;
+  }
+
+  .cta-btn:hover {
+    background: transparent;
+    border: 3px solid var(--light-blue);
+    color: var(--white);
+    cursor: pointer;
+  }
 }

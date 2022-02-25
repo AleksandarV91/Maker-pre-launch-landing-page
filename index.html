@@ -29,8 +29,9 @@
         <div class="hero-mobile"></div>
         <!-- HERO -->
         <section class="hero">
-          <div class="hero-left"></div>
-          <div class="hero-right"></div>
+          <!-- <div class="hero-left tab-desk">
+            <img src="./assets/illustration-hero-left.svg" alt="" />
+          </div> -->
           <div class="hero-text">
             <h1>
               Get paid for the work you <span class="accent">love</span> to do.
@@ -44,6 +45,9 @@
               <img src="./assets/icon-scroll.svg" alt="scroll icon" />
             </div>
           </div>
+          <!-- <div class="hero-right tab-desk">
+            <img src="./assets/illustration-hero-right.svg" alt="" />
+          </div> -->
         </section>
         <!-- END OF HERO -->
         <!-- DESCRIPTION -->
@@ -119,71 +123,77 @@
               always affordable, and it’s completely free to get started.
             </p>
           </div>
-          <div class="free-img">
-            <img src="./assets/icon-free.svg" alt="free icon" />
-          </div>
-          <div class="free">
-            <div class="free-content">
-              <h4>Dip your toe</h4>
-              <p>
-                Just getting started? No problem at all! Our free plan will take
-                you a long way.
-              </p>
-              <h2>Free</h2>
-              <div class="free-list">
+          <div class="pricing-panels">
+            <div class="free-img">
+              <img src="./assets/icon-free.svg" alt="free icon" />
+            </div>
+            <div class="free">
+              <div class="free-content">
+                <h4>Dip your toe</h4>
                 <p>
-                  <img
-                    src="./assets/icon-check copy.svg"
-                    alt="check icon"
-                  />Unlimited products
+                  Just getting started? No problem at all! Our free plan will
+                  take you a long way.
                 </p>
-                <p>
-                  <img
-                    src="./assets/icon-check copy.svg"
-                    alt="check icon"
-                  />Basic analytics
-                </p>
-                <p>
-                  <img
-                    src="./assets/icon-check copy.svg"
-                    alt="check icon"
-                  />Limited marketplace exposure
-                </p>
-                <p>
-                  <img src="./assets/icon-check copy.svg" alt="check icon" />10%
-                  fee per transaction
-                </p>
+                <h2>Free</h2>
+                <div class="free-list">
+                  <p>
+                    <img
+                      src="./assets/icon-check copy.svg"
+                      alt="check icon"
+                    />Unlimited products
+                  </p>
+                  <p>
+                    <img
+                      src="./assets/icon-check copy.svg"
+                      alt="check icon"
+                    />Basic analytics
+                  </p>
+                  <p>
+                    <img
+                      src="./assets/icon-check copy.svg"
+                      alt="check icon"
+                    />Limited marketplace exposure
+                  </p>
+                  <p>
+                    <img
+                      src="./assets/icon-check copy.svg"
+                      alt="check icon"
+                    />10% fee per transaction
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="paid-img">
-            <img src="./assets/icon-paid.svg" alt="paid-icon" />
-          </div>
-          <div class="paid">
-            <div class="paid-content">
-              <h4>Dive right in</h4>
-              <p>
-                Ready for the big time? Our paid plan will help you take your
-                business to the next level.
-              </p>
-              <h2>$25.00 <span class="small">/month</span></h2>
-              <div class="paid-list">
+            <div class="paid-img">
+              <img src="./assets/icon-paid.svg" alt="paid-icon" />
+            </div>
+            <div class="paid">
+              <div class="paid-content">
+                <h4>Dive right in</h4>
                 <p>
-                  <img src="./assets/icon-check.svg" alt="check icon" />Custom
-                  domain
+                  Ready for the big time? Our paid plan will help you take your
+                  business to the next level.
                 </p>
-                <p>
-                  <img src="./assets/icon-check.svg" alt="check icon" />Advanced
-                  analytics and reports
-                </p>
-                <p>
-                  <img src="./assets/icon-check.svg" alt="check icon" />High
-                  marketplace visibility
-                </p>
-                <p>
-                  <img src="./assets/icon-check.svg" alt="check icon" />5% fee
-                  per transaction
-                </p>
+                <h2>$25.00 <span class="small">/month</span></h2>
+                <div class="paid-list">
+                  <p>
+                    <img src="./assets/icon-check.svg" alt="check icon" />Custom
+                    domain
+                  </p>
+                  <p>
+                    <img
+                      src="./assets/icon-check.svg"
+                      alt="check icon"
+                    />Advanced analytics and reports
+                  </p>
+                  <p>
+                    <img src="./assets/icon-check.svg" alt="check icon" />High
+                    marketplace visibility
+                  </p>
+                  <p>
+                    <img src="./assets/icon-check.svg" alt="check icon" />5% fee
+                    per transaction
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -196,15 +206,17 @@
         <div class="cta-title">
           <h3>Get notified when we launch</h3>
         </div>
-        <form class="foot-form">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="err-border"
-            placeholder="Email address"
-          />
-          <small></small>
+        <form class="cta-form">
+          <div class="cta-input">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="err-border"
+              placeholder="Email address"
+            />
+            <small></small>
+          </div>
           <button class="cta-btn">Get notified</button>
         </form>
       </footer>
